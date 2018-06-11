@@ -1,7 +1,6 @@
 .terraform
 terraform.tfstate*
 tf.plan
-Makefile
 *.out
 *.swp
 *.DS_Store
