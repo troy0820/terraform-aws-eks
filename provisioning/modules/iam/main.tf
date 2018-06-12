@@ -1,3 +1,17 @@
+/**
+* IAM Module
+* This module is used to give the permissions necessary to connect to the
+* EKS cluster.
+*
+* Usage:
+*
+*  module "cluster-iam" {
+*    source = "../../modules/iam"
+*    ....
+* }
+*
+*/
+
 resource "null_resource" "is_ready" {
   triggers {
     is_ready = "${var.is_ready}"

@@ -1,11 +1,28 @@
+/**
+* VPC Module
+*
+* This module is to create a VPC in AWS
+* where your EKS cluster will live
+*
+* Usage:
+*
+* module "cluster-vpc" {
+*   source = "../../modules/network-vpc"
+*   is_ready = true
+*   cidr_block = "${var.cidr_block}"
+*   ....
+* }
+*
+*/
+
 resource "null_resource" "is_ready" {
-  triggers = {
+  triggers {
     is_ready = "${var.is_ready}"
   }
 }
 
 resource "aws_vpc" "eks-vpc" {
-  depends_on = ["null_resource"]
+  depends_on = ["null_resource.is_ready"]
 
   cidr_block           = "${var.cidr_block}"
   instance_tenancy     = "default"
