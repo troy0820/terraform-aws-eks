@@ -18,6 +18,11 @@ output "dynamo_table_arn" {
   description = "This is the arn for the dynamodb table for the remote state."
 }
 
+output "s3_bucket_name" {
+  description = "The name of the s3 bucket that you will need for the backend.tfvars"
+  value       = "${local.bucket_name}"
+}
+
 output "is_complete" {
   value       = "${null_resource.is_complete.id}"
   description = "This is the trigger from the null_resource that shows this module is complete."

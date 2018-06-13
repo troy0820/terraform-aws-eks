@@ -4,12 +4,12 @@ variable "is_ready" {
 }
 
 variable "s3_bucket" {
-  description = "Tags for Dynamo table"
+  description = "Name for Dynamo table"
   type        = "string"
 }
 
 variable "dynamo_name" {
-  description = "Tags for Dynamo table"
+  description = "Name for Dynamo table"
   type        = "string"
 }
 

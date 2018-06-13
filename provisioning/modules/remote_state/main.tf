@@ -27,6 +27,10 @@ resource "null_resource" "is_ready" {
   }
 }
 
+locals {
+  bucket_name = "${var.s3_bucket}-${random_id.s3-bucket.hex}"
+}
+
 ######################################################
 # Random ID generator for unique hash                #
 ######################################################
@@ -41,7 +45,7 @@ resource "random_id" "s3-bucket" {
 
 resource "aws_s3_bucket" "terraform-remote-state-bucket" {
   depends_on = ["null_resource.is_ready"]
-  bucket     = "${var.s3_bucket}-${random_id.s3-bucket.hex}"
+  bucket     = "${local.bucket_name}"
 
   versioning = {
     enabled = true

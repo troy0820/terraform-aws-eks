@@ -11,9 +11,9 @@ Usage:
 module "remote-state" {
   source = "../../modules/remote_state"
 
-  is_ready    = true
+  is_ready = true
 
-  s3_bucket   = "${var.s3_bucket}"
+  s3_bucket = "${var.s3_bucket}"
   dynamo_name = "${var.dynamo_name}"
   Tags will go here once defined in the module
 }
@@ -24,9 +24,9 @@ module "remote-state" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| dynamo_name | Tags for Dynamo table | string | - | yes |
+| dynamo_name | Name for Dynamo table | string | - | yes |
 | is_ready | Is the null_resource ready | string | - | yes |
-| s3_bucket | Tags for Dynamo table | string | - | yes |
+| s3_bucket | Name for Dynamo table | string | - | yes |
 
 ## Outputs
 
@@ -37,4 +37,5 @@ module "remote-state" {
 | is_complete | This is the trigger from the null_resource that shows this module is complete. |
 | s3_bucket_arn | This is the arn for the s3 bucket. |
 | s3_bucket_id | This is the s3 bucket id for the remote state. |
+| s3_bucket_name | The name of the s3 bucket that you will need for the backend.tfvars |
 
