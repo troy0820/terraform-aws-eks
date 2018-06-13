@@ -1,3 +1,26 @@
+/**
+* # Remote state module 
+*
+* This module is used to create the S3 bucket and
+* dynamodb table for the remote state.  The state for this
+* will be stored within the platform that is used to call this 
+* module.  
+* 
+* ```bash 
+* Usage:
+* 
+* module "remote-state" {
+*   source = "../../modules/remote_state"
+*
+*   is_ready = true
+*
+*   s3_bucket = "${var.s3_bucket}"
+*   dynamo_name = "${var.dynamo_name}"
+*   Tags will go here once defined in the module
+* }
+* ```
+**/
+
 resource "null_resource" "is_ready" {
   triggers {
     is_ready = "${var.is_ready}"
