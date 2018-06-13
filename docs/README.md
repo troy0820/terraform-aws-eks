@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Modules](#modules)
+  - [EKS](./EKS.md)
   - [Network subnets](./NETWORK_SUBNETS.md)
   - [Remote State](./REMOTE_STATE.md)
   - [Vpc](./VPC.md)
