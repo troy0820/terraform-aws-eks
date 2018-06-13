@@ -1,18 +1,18 @@
 /**
-* VPC Module
+* # VPC Module
 *
 * This module is to create a VPC in AWS
 * where your EKS cluster will live
-*
+*```bash 
 * Usage:
 *
 * module "cluster-vpc" {
 *   source = "../../modules/network-vpc"
-*   is_ready = true
+*   is_ready   = "${var.is_ready}" 
 *   cidr_block = "${var.cidr_block}"
 *   ....
 * }
-*
+*```
 */
 
 resource "null_resource" "is_ready" {

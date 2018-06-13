@@ -1,15 +1,18 @@
 /**
-* IAM Module
+* # IAM Module
 * This module is used to give the permissions necessary to connect to the
 * EKS cluster.
 *
+*```bash 
 * Usage:
 *
 *  module "cluster-iam" {
 *    source = "../../modules/iam"
-*    ....
-* }
+*    is_ready        = "${var.is_ready}"
+*    iam_policy_name = "${var.iam_policy_name}"
 *
+* }
+*```
 */
 
 resource "null_resource" "is_ready" {
