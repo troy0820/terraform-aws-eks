@@ -7,7 +7,7 @@ Usage:
 
 module "cluster-vpc" {
   source = "../../modules/network-vpc"
-  is_ready = true
+  is_ready   = true
   cidr_block = "${var.cidr_block}"
   ....
 }

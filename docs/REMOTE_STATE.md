@@ -11,9 +11,9 @@ Usage:
 module "remote-state" {
   source = "../../modules/remote_state"
 
-  is_ready = true
+  is_ready    = true
 
-  s3_bucket = "${var.s3_bucket}"
+  s3_bucket   = "${var.s3_bucket}"
   dynamo_name = "${var.dynamo_name}"
   Tags will go here once defined in the module
 }
