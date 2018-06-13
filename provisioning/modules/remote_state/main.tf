@@ -71,7 +71,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
 
   attribute {
     name = "LockID"
-    type = 5
+    type = "S"
   }
 
   # TODO:// Add Tags for remote state

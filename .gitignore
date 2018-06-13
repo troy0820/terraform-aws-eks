@@ -4,3 +4,4 @@ tf.plan
 *.out
 *.swp
 *.DS_Store
+*.tfvars

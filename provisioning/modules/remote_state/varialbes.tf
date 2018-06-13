@@ -1,5 +1,5 @@
 variable "is_ready" {
-  description = "Is the null_resource ready"
+  description = "Is the null_resource ready?"
   type        = "string"
 }
 
